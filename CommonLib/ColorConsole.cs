@@ -8,7 +8,7 @@ namespace CommonLib
 {
     public static class ColorConsole
     {
-        private static object _MessageLock= new object();
+        private static object _MessageLock = new object();
 
         /// <summary>
         /// Writes the provided text in a line in standard white.
@@ -57,11 +57,9 @@ namespace CommonLib
                 Console.ForegroundColor = color;
                 Console.Write(text, args);
                 Console.ForegroundColor = currentColor;
-
             }
             Console.ResetColor();
         }
-
 
         ///// <summary>
         ///// Using null puts the color back to default

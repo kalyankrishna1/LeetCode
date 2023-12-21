@@ -4,7 +4,7 @@ namespace NQueenProblem
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int [, ] inputBoard = ArrayHelper.GenerateMatrix(4,4, 0, 0);
 
@@ -32,17 +32,17 @@ namespace NQueenProblem
                 }
             }
 
-            ArrayHelper.DisplayElementsWithPosition(inputBoard, "Final output matrix ...",false);
+            ArrayHelper.DisplayElementsWithPosition(inputBoard, "Final output matrix ...", false);
         }
 
         /// <summary>
         /// A safe cell is a cell in the board where a queen can be placed on board[row,col] safely.
-        /// </summary>        
+        /// </summary>
         private static bool IsSafeCell(int[,] inputBoard, int proposedRow, int proposedColumn)
         {
             int rows = inputBoard.GetLength(0);
             int columns = inputBoard.GetLength(1);
-            
+
             // Can a queen attack from the left
             if (proposedColumn > 0)
             {
@@ -50,7 +50,7 @@ namespace NQueenProblem
                 {
                     if (inputBoard[proposedRow, i] == 1)
                     {
-                        return false;                        
+                        return false;
                     }
                 }
             }
@@ -78,7 +78,6 @@ namespace NQueenProblem
                     }
                 }
             }
-
 
             // Can a queen attack diagonally from bottom right
             if (proposedRow < rows && proposedColumn < columns)
@@ -128,13 +127,11 @@ namespace NQueenProblem
                 }
             }
 
-
             // Can a queen attack diagonally from bottom - left
             if (proposedRow > 0 && proposedColumn < columns)
             {
                 for (int i = proposedRow - 1, j = proposedColumn + 1; i >= 0 && j < columns; i--, j++)
                 {
-                    
                     if (inputBoard[i, j] == 1)
                     {
                         return false;

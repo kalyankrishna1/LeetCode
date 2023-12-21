@@ -6,7 +6,7 @@
     public static class ArrayHelper
     {
         /// <summary>
-        /// Generates a neat two dimensional array. Optionally populates the array with randomly generated numbers 
+        /// Generates a neat two dimensional array. Optionally populates the array with randomly generated numbers
         /// </summary>
         /// <param name="rows">The #rows in the two dimensional array</param>
         /// <param name="columns">The #columns in the two dimensional array</param>
@@ -29,7 +29,6 @@
 
             return returnedMatrix;
         }
-
 
         /// <summary>
         /// Displays the elements with position on console.
@@ -73,6 +72,5 @@
 
             Console.WriteLine("");
         }
-
     }
 }
